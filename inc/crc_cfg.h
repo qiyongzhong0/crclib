@@ -11,12 +11,12 @@
 
 #include <rtconfig.h>
 
-#define CRCLIB_USING_CRC8
-#define CRCLIB_USING_CRC16
-#define CRCLIB_USING_CRC32
+//#define CRCLIB_USING_CRC8
+//#define CRCLIB_USING_CRC16
+//#define CRCLIB_USING_CRC32
 
 #ifdef CRCLIB_USING_CRC8
-#define CRC8_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
+//#define CRC8_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
 #ifndef CRC8_POLY
 #define CRC8_POLY       0x8C //crc8 polynome, Poly = x8+x5+x4+1
 //#define CRC8_POLY       0xD9 //crc8 polynome, Poly = x8+x7+x4+x3+x+1
@@ -27,7 +27,7 @@
 #endif
 
 #ifdef CRCLIB_USING_CRC16
-#define CRC16_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
+//#define CRC16_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
 #ifndef CRC16_POLY
 #define CRC16_POLY      0xA001 //crc16 polynome, Poly = x16+x15+x2+1 (IBM,SDLC)
 //#define CRC16_POLY      0x8408 //crc16 polynome, Poly = x16+x12+x5+1 (CCITT,ISO,HDLC,ITUX25,PPP-FCS)
@@ -38,7 +38,7 @@
 #endif
 
 #ifdef CRCLIB_USING_CRC32
-#define CRC32_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
+//#define CRC32_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
 #ifndef CRC32_POLY
 #define CRC32_POLY      0xEDB88320 //crc32 polynome, Poly = x32+x26+x23+...+x2+x+1 (ZIP,RAR,IEEE,LAN/FDDI,PPP-FCS)
 //#define CRC32_POLY      0x82F63B78 //crc32 polynome, Poly = x32+x28+x27+...+x8+x6+1 (SCTP)
