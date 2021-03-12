@@ -14,7 +14,7 @@
 
 #ifdef CRCLIB_USING_CRC16
 
-#if (!defined(CRC16_USING_CONST_TABLE) || (CRC16_POLY != 0xA001) || (CRC16_POLY != 0x8408))
+#if (!defined(CRC16_USING_CONST_TABLE) || ((CRC16_POLY != 0xA001) && (CRC16_POLY != 0x8408)))
 /* 
  * @brief   cyclic initialize crc table
  * @param   none

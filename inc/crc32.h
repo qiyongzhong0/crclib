@@ -14,7 +14,7 @@
 
 #ifdef CRCLIB_USING_CRC32
 
-#if (!defined(CRC32_USING_CONST_TABLE) || (CRC32_POLY != 0xEDB88320) || (CRC32_POLY != 0x82F63B78))
+#if (!defined(CRC32_USING_CONST_TABLE) || ((CRC32_POLY != 0xEDB88320) && (CRC32_POLY != 0x82F63B78)))
 /* 
  * @brief   cyclic initialize crc table
  * @param   none

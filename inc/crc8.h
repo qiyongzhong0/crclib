@@ -14,7 +14,7 @@
 
 #ifdef CRCLIB_USING_CRC8
 
-#if (!defined(CRC8_USING_CONST_TABLE) || (CRC8_POLY != 0x8C) || (CRC8_POLY != 0xD9))
+#if (!defined(CRC8_USING_CONST_TABLE) || ((CRC8_POLY != 0x8C) && (CRC8_POLY != 0xD9)))
 /* 
  * @brief   cyclic initialize crc table
  * @param   none
