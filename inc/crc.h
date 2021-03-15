@@ -12,6 +12,9 @@
 #include <crc8.h>
 #include <crc16.h>
 #include <crc32.h>
+#include <crc8_ex.h>
+#include <crc16_ex.h>
+#include <crc32_ex.h>
 
 #endif
 
