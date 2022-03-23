@@ -20,6 +20,8 @@ crclib
 │   │   crc8_ex.h               // 8位crc扩展模块头文件
 │   │   crc16_ex.h              // 16位crc扩展模块头文件
 │   │   crc32_ex.h              // 32位crc扩展模块头文件
+│   │   crc_hw_stm32.h          // stm32硬件crc模块头文件
+│   │   crc_hw_sample.h         // 硬件crc使用示例头文件
 │   └───crc16_ex_sample.h       // 16位crc扩展使用示例头文件
 ├───src                         // 源码目录
 │   │   crc8.c                  // 8位crc模块
@@ -28,6 +30,8 @@ crclib
 │   │   crc8_ex.c               // 8位crc扩展模块
 │   │   crc16_ex.c              // 16位crc模块
 │   │   crc32_ex.c              // 32位crc模块
+│   │   crc_hw_stm32.c          // stm32硬件crc模块
+│   │   crc_hw_sample.c         // 硬件crc使用示例
 │   └───crc16_ex_sample.c       // 16位crc扩展使用示例
 │   license                     // 软件包许可证
 │   readme.md                   // 软件包使用说明
@@ -169,6 +173,28 @@ crclib package 遵循 LGPLv2.1 许可，详见 `LICENSE` 文件。
 - 参数 ：len--数据长度
 - 返回 ：32位crc计算结果
 
+####  void crc_hw_init(crc_hw_inst_t *hinst, u32 poly);
+- 功能 ：初始化硬件crc实例
+- 参数 ：hinst--实例句柄
+- 参数 ：poly--crc校验多项式
+- 返回 ：无
+
+####  u32 crc_hw_cyc_cal(crc_hw_inst_t *hinst, u32 init_val, u8 *pdata, u32 len);
+- 功能 ：驱动硬件循环计算crc校验值
+- 参数 ：hinst--实例句柄
+- 参数 ：init_val--计算初始值
+- 参数 ：pdata--数据缓冲区指针
+- 参数 ：len--数据长度
+- 返回 ：crc计算结果
+
+####  u32 crc_hw_cal(crc_hw_inst_t *hinst, u8 *pdata, u32 len);
+- 功能 ：驱动硬件计算crc校验值，初始值为0xFFFFFFFF，输出结果为计算值与0xFFFFFFFF的异或结果
+- 参数 ：hinst--实例句柄
+- 参数 ：init_val--计算初始值
+- 参数 ：pdata--数据缓冲区指针
+- 参数 ：len--数据长度
+- 返回 ：crc计算结果
+
 ### 2.2获取组件
 
 - **方式1：**
@@ -195,6 +221,8 @@ crclib package 遵循 LGPLv2.1 许可，详见 `LICENSE` 文件。
 | CRCLIB_USING_CRC16_EX 		| 使用16位CRC扩展模块
 | CRCLIB_USING_CRC32_EX 		| 使用32位CRC扩展模块
 | CRCLIB_USING_CRC16_EX_SAMPLE 	| 使用16位CRC扩展模块使用示例
+| CRCLIB_USING_CRC_HW 			| 使用硬件CRC模块
+| CRCLIB_USING_CRC_HW_SAMPLE 	| 使用硬件CRC模块使用示例
 
 ## 3. 联系方式
 
