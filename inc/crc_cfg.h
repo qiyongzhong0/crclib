@@ -18,6 +18,8 @@
 //#define CRCLIB_USING_CRC16_EX
 //#define CRCLIB_USING_CRC32_EX
 //#define CRCLIB_USING_CRC16_EX_SAMPLE
+//#define CRCLIB_USING_CRC_HW
+//#define CRCLIB_USING_CRC_HW_SAMPLE
 
 #ifdef CRCLIB_USING_CRC8
 //#define CRC8_USING_CONST_TABLE //using const table in flash memory, nodefined using table in ram
