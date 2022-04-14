@@ -12,6 +12,41 @@
 #ifdef CRCLIB_USING_CRC_HW
 #ifdef CRCLIB_USING_CRC_HW_SAMPLE
 
+crc_hw_inst_t crc8_hw_sample_inst;
+
+static int crc8_hw_sample_init(void)
+{
+    crc_hw_init(&crc8_hw_sample_inst, CRC8_HW_SAMPLE_POLY);
+    return(0);
+}
+INIT_BOARD_EXPORT(crc8_hw_sample_init);
+
+#ifdef CRCLIB_USING_CRC8
+#if (CRC8_HW_SAMPLE_POLY == CRC8_POLY)
+static void crc8_hw_test(void)
+{
+    u8 data[127];
+
+    for (int i=0; i<sizeof(data); i++)
+    {
+        data[i] = 0x10 + i;
+    }
+
+    u8 crc8_rst = crc8_cal(data, sizeof(data));
+    rt_kprintf("crc8_cal result = 0x%02X\n", crc8_rst);
+    
+    u8 crc8_hw_rst = CRC8_HW_SAMPLE_CAL(data, sizeof(data));
+    rt_kprintf("crc8_hw_cal result = 0x%02X\n", crc8_hw_rst);
+
+    if (crc8_rst == crc8_hw_rst)
+    {
+        rt_kprintf("crc8_hw_test is pass.\n");
+    }   
+}
+MSH_CMD_EXPORT(crc8_hw_test, crc8 hardware functions test);
+#endif
+#endif
+
 crc_hw_inst_t crc16_hw_sample_inst;
 
 static int crc16_hw_sample_init(void)
@@ -25,7 +60,7 @@ INIT_BOARD_EXPORT(crc16_hw_sample_init);
 #if (CRC16_HW_SAMPLE_POLY == CRC16_POLY)
 static void crc16_hw_test(void)
 {
-    u8 data[128];
+    u8 data[127];
 
     for (int i=0; i<sizeof(data); i++)
     {
@@ -60,7 +95,7 @@ INIT_BOARD_EXPORT(crc32_hw_sample_init);
 #if (CRC32_HW_SAMPLE_POLY == CRC32_POLY)
 static void crc32_hw_test(void)
 {
-    u8 data[128];
+    u8 data[127];
 
     for (int i=0; i<sizeof(data); i++)
     {
