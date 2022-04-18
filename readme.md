@@ -21,6 +21,7 @@ crclib
 │   │   crc16_ex.h              // 16位crc扩展模块头文件
 │   │   crc32_ex.h              // 32位crc扩展模块头文件
 │   │   crc_hw_hc32.h           // hc32硬件crc模块头文件
+│   │   crc_hw_n32.h            // n32硬件crc模块头文件
 │   │   crc_hw_stm32.h          // stm32硬件crc模块头文件
 │   │   crc_hw_sample.h         // 硬件crc使用示例头文件
 │   └───crc16_ex_sample.h       // 16位crc扩展使用示例头文件
@@ -32,6 +33,7 @@ crclib
 │   │   crc16_ex.c              // 16位crc模块
 │   │   crc32_ex.c              // 32位crc模块
 │   │   crc_hw_hc32.c           // hc32硬件crc模块
+│   │   crc_hw_n32.c            // n32硬件crc模块
 │   │   crc_hw_stm32.c          // stm32硬件crc模块
 │   │   crc_hw_sample.c         // 硬件crc使用示例
 │   └───crc16_ex_sample.c       // 16位crc扩展使用示例
