@@ -25,7 +25,7 @@ INIT_BOARD_EXPORT(crc8_hw_sample_init);
 #if (CRC8_HW_SAMPLE_POLY == CRC8_POLY)
 static void crc8_hw_test(void)
 {
-    u8 data[127];
+    u8 data[128];
 
     for (int i=0; i<sizeof(data); i++)
     {
@@ -60,7 +60,7 @@ INIT_BOARD_EXPORT(crc16_hw_sample_init);
 #if (CRC16_HW_SAMPLE_POLY == CRC16_POLY)
 static void crc16_hw_test(void)
 {
-    u8 data[127];
+    u8 data[128];
 
     for (int i=0; i<sizeof(data); i++)
     {
@@ -95,7 +95,7 @@ INIT_BOARD_EXPORT(crc32_hw_sample_init);
 #if (CRC32_HW_SAMPLE_POLY == CRC32_POLY)
 static void crc32_hw_test(void)
 {
-    u8 data[127];
+    u8 data[128];
 
     for (int i=0; i<sizeof(data); i++)
     {

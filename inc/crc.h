@@ -17,6 +17,7 @@
 #include <crc32_ex.h>
 #include <crc_hw_stm32.h>
 #include <crc_hw_hc32.h>
+#include <crc_hw_n32.h>
 
 #endif
 
