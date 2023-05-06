@@ -9,6 +9,10 @@
 #ifndef __CRC_HW_HC32_H__
 #define __CRC_HW_HC32_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "crc_cfg.h"
 #include "typedef.h"
 
@@ -56,5 +60,8 @@ u32 crc_hw_cal(crc_hw_inst_t *hinst, u8 *pdata, u32 len);
 
 #endif
 #endif
+#endif
+#ifdef __cplusplus
+}
 #endif
 #endif

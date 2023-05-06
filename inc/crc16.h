@@ -9,6 +9,10 @@
 #ifndef __CRC16_H__
 #define __CRC16_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "crc_cfg.h"
 #include "typedef.h"
 
@@ -42,5 +46,7 @@ u16 crc16_cyc_cal(u16 init_val, u8 *pdata, u32 len);
 u16 crc16_cal(u8 *pdata, u32 len);
 
 #endif
-
+#ifdef __cplusplus
+}
+#endif
 #endif

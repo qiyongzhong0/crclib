@@ -9,6 +9,10 @@
 #ifndef __CRC_HW_SAMPLE_H__
 #define __CRC_HW_SAMPLE_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <crc.h>
 
 #ifdef CRCLIB_USING_CRC_HW
@@ -41,5 +45,8 @@ extern crc_hw_inst_t crc32_hw_sample_inst;
 #define CRC32_HW_SAMPLE_CAL(pd, len) crc_hw_cal(&crc32_hw_sample_inst, pd, len)
 
 #endif
+#endif
+#ifdef __cplusplus
+}
 #endif
 #endif

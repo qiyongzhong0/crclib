@@ -9,6 +9,10 @@
 #ifndef __CRC8_H__
 #define __CRC8_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "crc_cfg.h"
 #include <typedef.h>
 
@@ -42,5 +46,7 @@ u8 crc8_cyc_cal(u8 init_val, u8 *pdata, u32 len);
 u8 crc8_cal(u8 *pdata, u32 len);
 
 #endif
-
+#ifdef __cplusplus
+}
+#endif
 #endif

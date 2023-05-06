@@ -8,6 +8,11 @@
 //---------------------------------------
 #ifndef __TYPEDEF_H__
 #define __TYPEDEF_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 //---------------------------------------
 typedef signed char s8;
 typedef signed short s16;
@@ -36,4 +41,7 @@ typedef void (*PHOOK_t)(void);
 #define false 0
 #endif
 //---------------------------------------
+#ifdef __cplusplus
+}
+#endif
 #endif

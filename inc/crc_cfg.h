@@ -9,6 +9,10 @@
 #ifndef __CRC_CFG_H__
 #define __CRC_CFG_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <rtconfig.h>
 
 // #define CRCLIB_USING_CRC8
@@ -60,5 +64,7 @@
 #define CRC32_INIT_VAL 0xFFFFFFFF
 #endif
 #endif
-
+#ifdef __cplusplus
+}
+#endif
 #endif
