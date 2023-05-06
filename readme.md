@@ -207,30 +207,28 @@ crclib package 遵循 LGPLv2.1 许可，详见 `LICENSE` 文件。
 
 ### 2.3配置参数说明
 
-| 参数宏 | 说明 |
-| ---- | ---- |
-| CRCLIB_USING_CRC8 			| 使用8位CRC
-| CRCLIB_USING_CRC16 			| 使用16位CRC
-| CRCLIB_USING_CRC32 			| 使用32位CRC
-| CRC8_USING_CONST_TABLE 		| 使用8位CRC常量校验表
-| CRC8_POLY 			    	| 8位CRC校验多项式
-| CRC8_INIT_VAL 				| 8位CRC校验初始值
-| CRC16_USING_CONST_TABLE 		| 使用16位CRC常量校验表
-| CRC16_POLY 			    	| 16位CRC校验多项式
-| CRC16_INIT_VAL 				| 16位CRC校验初始值
-| CRC32_USING_CONST_TABLE 		| 使用32位CRC常量校验表
-| CRC32_POLY 			    	| 32位CRC校验多项式
-| CRC32_INIT_VAL 				| 32位CRC校验初始值
-| CRCLIB_USING_CRC8_EX 			| 使用8位CRC扩展模块
-| CRCLIB_USING_CRC16_EX 		| 使用16位CRC扩展模块
-| CRCLIB_USING_CRC32_EX 		| 使用32位CRC扩展模块
-| CRCLIB_USING_CRC16_EX_SAMPLE 	| 使用16位CRC扩展模块使用示例
-| CRCLIB_USING_CRC_HW 			| 使用硬件CRC模块
-| CRCLIB_USING_CRC_HW_SAMPLE 	| 使用硬件CRC模块使用示例
+| 参数宏                       | 说明                        |
+| ---------------------------- | --------------------------- |
+| CRCLIB_USING_CRC8            | 使用8位CRC                  |
+| CRCLIB_USING_CRC16           | 使用16位CRC                 |
+| CRCLIB_USING_CRC32           | 使用32位CRC                 |
+| CRC8_USING_CONST_TABLE       | 使用8位CRC常量校验表        |
+| CRC8_POLY                    | 8位CRC校验多项式            |
+| CRC8_INIT_VAL                | 8位CRC校验初始值            |
+| CRC16_USING_CONST_TABLE      | 使用16位CRC常量校验表       |
+| CRC16_POLY                   | 16位CRC校验多项式           |
+| CRC16_INIT_VAL               | 16位CRC校验初始值           |
+| CRC32_USING_CONST_TABLE      | 使用32位CRC常量校验表       |
+| CRC32_POLY                   | 32位CRC校验多项式           |
+| CRC32_INIT_VAL               | 32位CRC校验初始值           |
+| CRCLIB_USING_CRC8_EX         | 使用8位CRC扩展模块          |
+| CRCLIB_USING_CRC16_EX        | 使用16位CRC扩展模块         |
+| CRCLIB_USING_CRC32_EX        | 使用32位CRC扩展模块         |
+| CRCLIB_USING_CRC16_EX_SAMPLE | 使用16位CRC扩展模块使用示例 |
+| CRCLIB_USING_CRC_HW          | 使用硬件CRC模块             |
+| CRCLIB_USING_CRC_HW_SAMPLE   | 使用硬件CRC模块使用示例     |
 
 ## 3. 联系方式
 
 * 维护：qiyongzhong
 * 主页：https://gitee.com/qiyongzhong0/crclib
-
-
