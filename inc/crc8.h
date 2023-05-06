@@ -35,7 +35,7 @@ void crc8_table_init(void);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u8 crc8_cyc_cal(u8 init_val, u8 *pdata, u32 len);
+uint8_t crc8_cyc_cal(uint8_t init_val, uint8_t *pdata, uint32_t len);
 
 /*
  * @brief   calculation crc check value, initial is CRC8_INIT_VOL
@@ -43,7 +43,7 @@ u8 crc8_cyc_cal(u8 init_val, u8 *pdata, u32 len);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u8 crc8_cal(u8 *pdata, u32 len);
+uint8_t crc8_cal(uint8_t *pdata, uint32_t len);
 
 #endif
 #ifdef __cplusplus

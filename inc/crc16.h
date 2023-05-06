@@ -35,7 +35,7 @@ void crc16_table_init(void);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u16 crc16_cyc_cal(u16 init_val, u8 *pdata, u32 len);
+uint16_t crc16_cyc_cal(uint16_t init_val, uint8_t *pdata, uint32_t len);
 
 /*
  * @brief   calculation crc check value, initial is 0xFFFF
@@ -43,7 +43,7 @@ u16 crc16_cyc_cal(u16 init_val, u8 *pdata, u32 len);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u16 crc16_cal(u8 *pdata, u32 len);
+uint16_t crc16_cal(uint8_t *pdata, uint32_t len);
 
 #endif
 #ifdef __cplusplus

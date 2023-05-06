@@ -11,7 +11,7 @@
 #ifdef CRCLIB_USING_CRC32
 
 #if (defined(CRC32_USING_CONST_TABLE) && (CRC32_POLY == 0xEDB88320))
-static const u32 crc32_table[] = {
+static const uint32_t crc32_table[] = {
     0x00000000, 0x77073096, 0xEE0E612C, 0x990951BA, 0x076DC419, 0x706AF48F,
     0xE963A535, 0x9E6495A3, 0x0EDB8832, 0x79DCB8A4, 0xE0D5E91E, 0x97D2D988,
     0x09B64C2B, 0x7EB17CBD, 0xE7B82D07, 0x90BF1D91, 0x1DB71064, 0x6AB020F2,
@@ -123,21 +123,21 @@ void crc32_table_init(void) {
 INIT_BOARD_EXPORT(crc32_table_init);
 #endif
 
-u32 crc32_cyc_cal(u32 init_val, u8 *pdata, u32 len) {
-  register u32 i;
-  register u32 crc32;
-  register u8 idx;
+uint32_t crc32_cyc_cal(uint32_t init_val, uint8_t *pdata, uint32_t len) {
+  register uint32_t i;
+  register uint32_t crc32;
+  register uint8_t idx;
 
   crc32 = init_val;
   for (i = 0; i < len; i++) {
-    idx = ((u8)crc32) ^ (*pdata++);
+    idx = ((uint8_t)crc32) ^ (*pdata++);
     crc32 = (crc32 >> 8) ^ crc32_table[idx];
   }
 
   return (crc32);
 }
 
-u32 crc32_cal(u8 *pdata, u32 len) {
+uint32_t crc32_cal(uint8_t *pdata, uint32_t len) {
   return (crc32_cyc_cal(CRC32_INIT_VAL, pdata, len) ^ CRC32_INIT_VAL);
 }
 

@@ -35,7 +35,7 @@ void crc32_table_init(void);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u32 crc32_cyc_cal(u32 init_val, u8 *pdata, u32 len);
+uint32_t crc32_cyc_cal(uint32_t init_val, uint8_t *pduint32_t, uint32_t len);
 
 /*
  * @brief   calculation crc check value, initial is CRC32_INIT_VAL
@@ -43,7 +43,7 @@ u32 crc32_cyc_cal(u32 init_val, u8 *pdata, u32 len);
  * @param   len         - datas len
  * @retval  calculated result
  */
-u32 crc32_cal(u8 *pdata, u32 len);
+uint32_t crc32_cal(uint8_t *pduint32_t, uint32_t len);
 
 #endif
 #ifdef __cplusplus
